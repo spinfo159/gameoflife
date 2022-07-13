@@ -1,4 +1,4 @@
-node('GOL') {
+node() {
     stage('scm') {
         git 'https://github.com/spinfo159/gameoflife.git'
     }
