@@ -2,7 +2,7 @@ pipeline {
     agent { label 'MASTER'}
     triggers {
         cron('H * * * *')
-        pollSCM('* * * * *')
+        pollSCM('H * * * *')
     }
     parameters {
         string(name: 'BRANCH', defaultValue: 'master', description: 'Branch to build' )
