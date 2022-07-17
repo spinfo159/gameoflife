@@ -38,7 +38,7 @@ pipeline {
             }
         }
     
-        }
+        
     }
     post {
         success {
@@ -49,7 +49,7 @@ pipeline {
         failure {
             mail subject: 'BUILD Failed '+env.BUILD_ID+'URL is '+env.BUILD_URL, to: 'devops@aipl.com', from: 'jenkins@aipl.com', body: 'EMPTY BODY failure session'
         }
-        always {
+        always { 
             echo "Finished"
         }
         changed {
